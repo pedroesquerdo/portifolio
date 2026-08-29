@@ -25,3 +25,12 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const brand = document.querySelector('.brand-animated');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (brand && !reduceMotion) {
+  window.setTimeout(() => {
+    brand.classList.add('compact');
+  }, 1400);
+}

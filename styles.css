@@ -87,6 +87,10 @@ h3 { font-size: 1.65rem; margin: 14px 0; }
 .contact { margin-top: 40px; margin-bottom: 80px; border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(135deg, rgba(88,166,255,.08), rgba(126,231,135,.06)); }
 .contact p { color: var(--muted); }
 footer { max-width: var(--max); margin: 0 auto; padding: 28px 24px 50px; border-top: 1px solid var(--line); color: #778394; font-size: .85rem; }
+footer p { margin: 0; }
+.footer-credit { margin-top: 6px; color: #657184; }
+.footer-credit a { color: #9aa6b5; font-weight: 600; transition: color .2s ease; }
+.footer-credit a:hover { color: var(--accent); }
 
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio técnico de Pedro Esquerdo — projetos e estudos práticos sobre mensageria, filas, criptografia, blockchain, integrações e engenharia de software." />
-  <title>Pedro Esquerdo | Portfólio de Tecnologia</title>
+  <meta name="description" content="Portfólio técnico de Pedro Esquerdo — projetos sobre mensageria, filas, criptografia, blockchain, scraping e engenharia de software." />
+  <title>Pedro Esquerdo | Portfólio Técnico</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,116 +12,89 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Início">Esq<span>.</span></a>
-    <nav class="nav" aria-label="Navegação principal">
-      <a href="#sobre">Sobre</a>
+    <a class="brand" href="#inicio">Esq<span>.</span></a>
+    <nav class="nav">
       <a href="#projetos">Projetos</a>
       <a href="#conceitos">Conceitos</a>
       <a href="#stack">Tecnologias</a>
+      <a href="https://github.com/pedroesquerdo" target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
     <button class="menu-button" aria-label="Abrir menu" aria-expanded="false">☰</button>
   </header>
 
   <main>
-    <section id="inicio" class="hero section">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">PORTFÓLIO • ENGENHARIA DE SOFTWARE • ESTUDOS PRÁTICOS</p>
+    <section id="inicio" class="section hero-minimal">
+      <div class="reveal">
+        <p class="eyebrow">PORTFÓLIO TÉCNICO</p>
         <h1>Conceitos de tecnologia <span>explorados através de projetos.</span></h1>
-        <p class="hero-text">Um portfólio voltado ao estudo prático de fundamentos e padrões de software: mensageria, processamento assíncrono, filas, segurança, criptografia, blockchain, integração de sistemas e outros conceitos que sustentam aplicações modernas.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projetos">Explorar projetos</a>
-          <a class="button secondary" href="https://github.com/pedroesquerdo" target="_blank" rel="noreferrer">GitHub ↗</a>
-        </div>
-      </div>
-      <div class="hero-panel reveal" aria-label="Fluxo de estudo">
-        <div class="terminal-top"><span></span><span></span><span></span></div>
-        <div class="terminal-body">
-          <p><strong>$</strong> learn --by-building</p>
-          <p class="muted">→ entender o conceito</p>
-          <p class="muted">→ implementar uma versão mínima</p>
-          <p class="muted">→ observar limitações reais</p>
-          <p class="muted">→ evoluir a arquitetura</p>
-          <p class="success">✓ conhecimento aplicado</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre" class="section two-columns">
-      <div class="section-heading reveal">
-        <p class="eyebrow">SOBRE O PORTFÓLIO</p>
-        <h2>Aprender tecnologia construindo.</h2>
-      </div>
-      <div class="about-copy reveal">
-        <p>Os projetos deste portfólio partem de conceitos de engenharia de software e evoluem de forma incremental. A ideia não é apenas demonstrar uma aplicação pronta, mas registrar o caminho entre uma implementação simples e uma arquitetura mais robusta.</p>
-        <p>Cada projeto busca responder perguntas práticas: por que filas existem? Quando o processamento deve ser assíncrono? Como mensagens falham? Onde criptografia entra em um sistema? O que uma blockchain realmente resolve?</p>
+        <p class="hero-text">Estudos práticos de engenharia de software, com foco em compreender fundamentos, limitações e evolução arquitetural — não apenas o resultado final.</p>
       </div>
     </section>
 
     <section id="projetos" class="section">
       <div class="section-heading reveal">
         <p class="eyebrow">PROJETOS</p>
-        <h2>Conceitos transformados em código.</h2>
-        <p>Projetos progressivos, com contexto, implementação, limitações e próximos passos documentados.</p>
+        <h2>Laboratório de conceitos.</h2>
+        <p>Cada projeto nasce de uma pergunta técnica e evolui por etapas.</p>
       </div>
 
-      <div class="project-grid">
-        <article class="project-card featured reveal">
-          <div class="project-number">01</div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="status">EM DESENVOLVIMENTO</span>
-              <span class="project-topic">Mensageria</span>
-            </div>
+      <div class="bento-grid">
+        <a class="bento-card bento-featured reveal" href="carteiro.html">
+          <div class="bento-topline">
+            <span class="status">EM DESENVOLVIMENTO</span>
+            <span class="bento-index">01</span>
+          </div>
+          <div class="bento-content">
+            <p class="bento-kicker">Mensageria</p>
             <h3>Carteiro</h3>
-            <p>Projeto de estudo progressivo sobre envio de e-mails e mensageria. Começou com envio direto via SMTP e evoluiu para uma API HTTP síncrona em ASP.NET Core. As próximas etapas introduzem persistência, processamento assíncrono, RabbitMQ, ACK/NACK, retries, Dead Letter Queue e idempotência.</p>
-            <div class="concept-flow" aria-label="Evolução do Carteiro">
-              <span>HTTP API</span><i>→</i><span>SMTP</span><i>→</i><span>Fila</span><i>→</i><span>Worker</span>
-            </div>
-            <div class="tags">
-              <span>.NET 8</span><span>ASP.NET Core</span><span>SMTP</span><span>MailKit</span><span>RabbitMQ</span><span>Mensageria</span>
-            </div>
-            <a class="project-link" href="https://github.com/pedroesquerdo/carteiro" target="_blank" rel="noreferrer">Ver projeto no GitHub ↗</a>
+            <p>Do SMTP síncrono até filas, workers, retry, DLQ e idempotência.</p>
+            <div class="mini-flow"><span>HTTP</span><i>→</i><span>SMTP</span><i>→</i><span>Queue</span><i>→</i><span>Worker</span></div>
+          </div>
+          <span class="bento-link">Abrir case técnico →</span>
+        </a>
+
+        <article class="bento-card reveal">
+          <div class="bento-topline"><span class="status planned">PRÓXIMO</span><span class="bento-index">02</span></div>
+          <div class="bento-content">
+            <p class="bento-kicker">Concorrência</p>
+            <h3>Filas</h3>
+            <p>Producer, consumer, ACK/NACK, retries, ordenação e backpressure.</p>
           </div>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-number">02</div>
-          <span class="status planned">PRÓXIMO ESTUDO</span>
-          <h3>Filas & processamento assíncrono</h3>
-          <p>Experimentos para compreender producers, consumers, concorrência, retries, confirmação de processamento, ordenação, backpressure e Dead Letter Queues.</p>
-          <div class="tags"><span>RabbitMQ</span><span>Queues</span><span>Workers</span><span>Async</span></div>
+        <article class="bento-card reveal">
+          <div class="bento-topline"><span class="status planned">PLANEJADO</span><span class="bento-index">03</span></div>
+          <div class="bento-content">
+            <p class="bento-kicker">Segurança</p>
+            <h3>Criptografia</h3>
+            <p>Hashing, AES, RSA, assinaturas digitais e troca de chaves.</p>
+          </div>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-number">03</div>
-          <span class="status planned">PLANEJADO</span>
-          <h3>Criptografia</h3>
-          <p>Laboratório para explorar hashing, criptografia simétrica e assimétrica, troca de chaves, assinaturas digitais, armazenamento seguro de senhas e casos de uso reais.</p>
-          <div class="tags"><span>AES</span><span>RSA</span><span>Hash</span><span>Assinaturas</span></div>
+        <article class="bento-card reveal">
+          <div class="bento-topline"><span class="status planned">PLANEJADO</span><span class="bento-index">04</span></div>
+          <div class="bento-content">
+            <p class="bento-kicker">Sistemas distribuídos</p>
+            <h3>Blockchain</h3>
+            <p>Blocos, hashes, imutabilidade, consenso e ledger distribuído.</p>
+          </div>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-number">04</div>
-          <span class="status planned">PLANEJADO</span>
-          <h3>Blockchain</h3>
-          <p>Implementação didática de uma cadeia de blocos para estudar hashes, encadeamento, imutabilidade, consenso e a diferença entre banco de dados tradicional e ledger distribuído.</p>
-          <div class="tags"><span>Blockchain</span><span>Hash</span><span>Ledger</span><span>Consenso</span></div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-number">05</div>
-          <span class="status planned">PLANEJADO</span>
-          <h3>Web scraping</h3>
-          <p>Coleta estruturada de dados da web para estudar requisições HTTP, parsing, crawling, rate limiting, deduplicação, persistência e automação de coleta.</p>
-          <div class="tags"><span>HTTP</span><span>Parsing</span><span>Crawling</span><span>Dados</span></div>
+        <article class="bento-card bento-wide reveal">
+          <div class="bento-topline"><span class="status planned">PLANEJADO</span><span class="bento-index">05</span></div>
+          <div class="bento-content">
+            <p class="bento-kicker">Coleta de dados</p>
+            <h3>Web scraping</h3>
+            <p>HTTP, parsing, crawling, rate limiting, persistência e automação de coleta.</p>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="conceitos" class="section concepts-section">
       <div class="section-heading reveal">
-        <p class="eyebrow">TRILHAS DE ESTUDO</p>
-        <h2>O que o portfólio pretende explorar.</h2>
+        <p class="eyebrow">MAPA DE ESTUDOS</p>
+        <h2>Áreas que conectam os projetos.</h2>
       </div>
       <div class="concept-grid">
         <div class="concept-item reveal"><strong>01</strong><span>Mensageria & eventos</span></div>
@@ -130,8 +103,6 @@
         <div class="concept-item reveal"><strong>04</strong><span>Blockchain & sistemas distribuídos</span></div>
         <div class="concept-item reveal"><strong>05</strong><span>Protocolos & redes</span></div>
         <div class="concept-item reveal"><strong>06</strong><span>Observabilidade & resiliência</span></div>
-        <div class="concept-item reveal"><strong>07</strong><span>Dados & persistência</span></div>
-        <div class="concept-item reveal"><strong>08</strong><span>Integrações & APIs</span></div>
       </div>
     </section>
 
@@ -141,13 +112,13 @@
         <h2>Ferramentas usadas nos experimentos.</h2>
       </div>
       <div class="stack-list reveal">
-        <span>.NET</span><span>C#</span><span>ASP.NET Core</span><span>SQL Server</span><span>PostgreSQL</span><span>Python</span><span>REST APIs</span><span>SMTP</span><span>RabbitMQ</span><span>Docker</span><span>GitHub Actions</span><span>Linux</span>
+        <span>.NET</span><span>C#</span><span>ASP.NET Core</span><span>Python</span><span>SQL Server</span><span>PostgreSQL</span><span>SMTP</span><span>RabbitMQ</span><span>Docker</span><span>Linux</span><span>REST APIs</span>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Pedro Esquerdo. Portfólio de estudos e projetos em tecnologia.</p>
+    <p>© <span id="year"></span> Pedro Esquerdo. Portfólio de estudos em tecnologia.</p>
     <p class="footer-credit">desenvolvido por <a href="https://www.funildigital.com.br/" target="_blank" rel="noopener noreferrer">Funil Digital</a></p>
   </footer>
 

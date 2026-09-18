@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Carteiro — estudo progressivo sobre SMTP, APIs, mensageria, filas e processamento assíncrono." />
+  <title>Carteiro | Pedro Esquerdo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Esq<span>.</span></a>
+    <nav class="nav">
+      <a href="index.html#projetos">Projetos</a>
+      <a href="https://github.com/pedroesquerdo/carteiro" target="_blank" rel="noreferrer">Repositório ↗</a>
+    </nav>
+  </header>
+
+  <main class="case-layout">
+    <aside class="case-sidebar">
+      <a href="#visao">Visão geral</a>
+      <a href="#problema">Problema</a>
+      <a href="#arquitetura">Arquitetura</a>
+      <a href="#evolucao">Evolução</a>
+      <a href="#conceitos">Conceitos</a>
+      <a href="#proximos">Próximos passos</a>
+    </aside>
+
+    <article class="case-content">
+      <section id="visao" class="case-hero">
+        <p class="eyebrow">PROJETO 01 • MENSAGERIA</p>
+        <h1>Carteiro</h1>
+        <p class="case-lead">Um projeto progressivo para entender envio de e-mails, SMTP, APIs síncronas e, nas próximas etapas, processamento assíncrono e mensageria.</p>
+        <div class="tags"><span>.NET 8</span><span>ASP.NET Core</span><span>MailKit</span><span>SMTP</span><span>RabbitMQ</span></div>
+      </section>
+
+      <section id="problema" class="case-section">
+        <p class="eyebrow">01 — PROBLEMA</p>
+        <h2>Por que estudar mensageria a partir de e-mail?</h2>
+        <p>Enviar um e-mail parece simples até a aplicação precisar esperar um servidor externo responder. Esse cenário é útil para observar, na prática, latência, dependência externa, falhas transitórias e acoplamento entre a requisição do usuário e o processamento.</p>
+        <div class="callout">A primeira versão é propositalmente síncrona. A limitação faz parte do estudo.</div>
+      </section>
+
+      <section id="arquitetura" class="case-section">
+        <p class="eyebrow">02 — ARQUITETURA ATUAL</p>
+        <h2>HTTP entra. SMTP sai.</h2>
+        <div class="architecture">
+          <div class="arch-node"><strong>Cliente</strong><span>POST /emails</span></div>
+          <i>→</i>
+          <div class="arch-node"><strong>Carteiro API</strong><span>ASP.NET Core</span></div>
+          <i>→</i>
+          <div class="arch-node"><strong>Servidor SMTP</strong><span>STARTTLS</span></div>
+          <i>→</i>
+          <div class="arch-node"><strong>Destinatário</strong><span>E-mail</span></div>
+        </div>
+        <p>A API só responde depois que a comunicação SMTP termina. Se o servidor SMTP ficar lento, a requisição também fica lenta.</p>
+      </section>
+
+      <section id="evolucao" class="case-section">
+        <p class="eyebrow">03 — EVOLUÇÃO</p>
+        <h2>O projeto cresce junto com os conceitos.</h2>
+        <div class="timeline">
+          <div class="timeline-item done"><span>01</span><div><strong>SMTP direto</strong><p>Aplicação console enviando um único e-mail.</p></div></div>
+          <div class="timeline-item done"><span>02</span><div><strong>API HTTP síncrona</strong><p>Endpoint POST /emails com envio via MailKit.</p></div></div>
+          <div class="timeline-item"><span>03</span><div><strong>Persistência</strong><p>Registrar e-mail, estado e histórico.</p></div></div>
+          <div class="timeline-item"><span>04</span><div><strong>Fila + worker</strong><p>Separar recebimento HTTP do processamento.</p></div></div>
+          <div class="timeline-item"><span>05</span><div><strong>ACK/NACK e retry</strong><p>Tratar falhas temporárias de forma explícita.</p></div></div>
+          <div class="timeline-item"><span>06</span><div><strong>DLQ e idempotência</strong><p>Evitar perda e duplicidade de mensagens.</p></div></div>
+        </div>
+      </section>
+
+      <section id="conceitos" class="case-section">
+        <p class="eyebrow">04 — CONCEITOS</p>
+        <h2>O que o projeto pretende demonstrar.</h2>
+        <div class="case-grid">
+          <div><strong>SMTP</strong><p>Cliente, servidor, autenticação e STARTTLS.</p></div>
+          <div><strong>Sincronicidade</strong><p>Como dependências externas afetam o tempo de resposta.</p></div>
+          <div><strong>Mensageria</strong><p>Separação entre produção e processamento.</p></div>
+          <div><strong>Resiliência</strong><p>Retry, DLQ, confirmação e recuperação de falhas.</p></div>
+        </div>
+      </section>
+
+      <section id="proximos" class="case-section">
+        <p class="eyebrow">05 — PRÓXIMOS PASSOS</p>
+        <h2>Próxima etapa: tirar o SMTP do caminho crítico.</h2>
+        <div class="architecture future">
+          <div class="arch-node"><strong>HTTP API</strong><span>Producer</span></div>
+          <i>→</i>
+          <div class="arch-node accent"><strong>RabbitMQ</strong><span>Queue</span></div>
+          <i>→</i>
+          <div class="arch-node"><strong>Worker</strong><span>Consumer</span></div>
+          <i>→</i>
+          <div class="arch-node"><strong>SMTP</strong><span>Envio</span></div>
+        </div>
+        <a class="button primary" href="https://github.com/pedroesquerdo/carteiro" target="_blank" rel="noreferrer">Ver código no GitHub ↗</a>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Pedro Esquerdo.</p>
+    <p class="footer-credit">desenvolvido por <a href="https://www.funildigital.com.br/" target="_blank" rel="noopener noreferrer">Funil Digital</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

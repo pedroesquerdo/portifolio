@@ -1,68 +1,77 @@
 # Portfólio — Pedro Esquerdo
 
-Portfólio pessoal focado em **automação de processos, integrações, dados, web scraping e soluções com inteligência artificial para empresas**.
+Portfólio técnico voltado ao estudo prático de **conceitos de engenharia de software e tecnologia**.
 
-## Objetivo
+A proposta é usar projetos progressivos para entender não apenas como uma tecnologia funciona, mas por que ela existe, quais problemas resolve, quais limitações aparecem em implementações simples e como a arquitetura pode evoluir.
 
-Mais do que listar tecnologias, este portfólio apresenta projetos com contexto de negócio: qual problema existe, como a solução funciona e quais tecnologias são aplicadas.
+## Conceito
 
-## MVP atual
+O portfólio funciona como um laboratório de estudos.
 
-O primeiro MVP é uma landing page estática, responsiva e sem dependências de build.
+Cada projeto parte de uma implementação mínima e avança por etapas, registrando:
 
-### Seções
+- conceito estudado;
+- implementação inicial;
+- limitações observadas;
+- evolução da arquitetura;
+- padrões e tecnologias relacionados.
 
-- Apresentação
-- Sobre
-- Projetos
-- Stack tecnológica
-- Contato
+## Projeto em destaque
 
-### Projetos apresentados
+### Carteiro — mensageria
 
-- **FlowOps** — plataforma de automações empresariais
-- **WebIntel** — monitoramento e coleta automatizada de dados públicos da web
-- **CompanyBot** — assistente corporativo com IA e RAG
-- **DataCheck** — auditoria automática de planilhas e bases de dados
+O [Carteiro](https://github.com/pedroesquerdo/carteiro) é um projeto de estudo progressivo sobre envio de e-mails e mensageria.
 
-## Tecnologias do site
+Evolução atual:
 
-- HTML5
-- CSS3
-- JavaScript
+1. envio simples via SMTP ✅
+2. API HTTP com envio síncrono ✅
+3. persistência de e-mails e status
+4. processamento assíncrono
+5. RabbitMQ: producer, queue e consumer
+6. ACK/NACK e retry
+7. Dead Letter Queue
+8. idempotência
+9. templates e anexos
+10. observabilidade e padrões de produção
 
-A ausência de framework nesta primeira versão é intencional: o objetivo é manter o MVP simples, leve e fácil de publicar. Conforme o portfólio evoluir, os projetos demonstrativos poderão ter suas próprias APIs, bancos, workers e containers.
+## Trilhas planejadas
 
-## Executando localmente
+- Mensageria e eventos
+- Filas e processamento assíncrono
+- Criptografia
+- Blockchain e sistemas distribuídos
+- Protocolos e redes
+- Web scraping
+- Observabilidade e resiliência
+- Persistência e bancos de dados
+- Integrações e APIs
 
-Clone o repositório:
+## Tecnologias
 
-```bash
-git clone https://github.com/pedroesquerdo/portifolio.git
-cd portifolio
-```
+O conjunto de tecnologias varia conforme cada experimento. Entre elas:
 
-Abra `index.html` no navegador ou utilize um servidor HTTP local, por exemplo:
+- .NET / C#
+- ASP.NET Core
+- Python
+- SQL Server
+- PostgreSQL
+- SMTP
+- RabbitMQ
+- Docker
+- Linux
+- REST APIs
+- GitHub Actions
 
-```bash
-python -m http.server 8080
-```
+## Site
 
-Depois acesse `http://localhost:8080`.
+O site é uma aplicação estática em HTML, CSS e JavaScript publicada pelo GitHub Pages.
 
-## Roadmap
+Para executar localmente:
 
-- [x] Landing page inicial
-- [ ] Publicação do portfólio
-- [ ] Case detalhado do FlowOps
-- [ ] MVP funcional do FlowOps
-- [ ] Projeto de web scraping / WebIntel
-- [ ] Chatbot corporativo / CompanyBot
-- [ ] Auditor de dados / DataCheck
-- [ ] Dockerização
-- [ ] CI/CD com GitHub Actions
-- [ ] Deploy em VPS / DigitalOcean
-- [ ] Domínio próprio e HTTPS
+- clone o repositório;
+- acesse a pasta `portifolio`;
+- rode um servidor HTTP local, por exemplo `python -m http.server 8080`.
 
 ## Autor
 

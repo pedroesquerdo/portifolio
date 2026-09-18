@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de soluções tecnológicas para empresas — automação, integrações, dados, web scraping e inteligência artificial." />
-  <title>Pedro Esquerdo | Automação & Soluções Tecnológicas</title>
+  <meta name="description" content="Portfólio técnico de Pedro Esquerdo — projetos e estudos práticos sobre mensageria, filas, criptografia, blockchain, integrações e engenharia de software." />
+  <title>Pedro Esquerdo | Portfólio de Tecnologia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,10 +14,10 @@
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Início">Esq<span>.</span></a>
     <nav class="nav" aria-label="Navegação principal">
-      <a href="#sobre">Visão</a>
-      <a href="#projetos">Soluções</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#conceitos">Conceitos</a>
       <a href="#stack">Tecnologias</a>
-      <a href="#contato">Contato</a>
     </nav>
     <button class="menu-button" aria-label="Abrir menu" aria-expanded="false">☰</button>
   </header>
@@ -25,105 +25,129 @@
   <main>
     <section id="inicio" class="hero section">
       <div class="hero-copy reveal">
-        <p class="eyebrow">AUTOMAÇÃO • INTEGRAÇÕES • DADOS • IA</p>
-        <h1>Soluções tecnológicas para <span>otimizar operações e integrar processos.</span></h1>
-        <p class="hero-text">Projetos voltados à automação de processos, integração entre sistemas, coleta e tratamento de dados, web scraping e aplicação de inteligência artificial em contextos empresariais.</p>
+        <p class="eyebrow">PORTFÓLIO • ENGENHARIA DE SOFTWARE • ESTUDOS PRÁTICOS</p>
+        <h1>Conceitos de tecnologia <span>explorados através de projetos.</span></h1>
+        <p class="hero-text">Um portfólio voltado ao estudo prático de fundamentos e padrões de software: mensageria, processamento assíncrono, filas, segurança, criptografia, blockchain, integração de sistemas e outros conceitos que sustentam aplicações modernas.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projetos">Ver soluções</a>
+          <a class="button primary" href="#projetos">Explorar projetos</a>
           <a class="button secondary" href="https://github.com/pedroesquerdo" target="_blank" rel="noreferrer">GitHub ↗</a>
         </div>
       </div>
-      <div class="hero-panel reveal">
+      <div class="hero-panel reveal" aria-label="Fluxo de estudo">
         <div class="terminal-top"><span></span><span></span><span></span></div>
         <div class="terminal-body">
-          <p><strong>$</strong> automation.run()</p>
-          <p class="muted">→ coletando dados...</p>
-          <p class="muted">→ processando regras...</p>
-          <p class="muted">→ sincronizando sistemas...</p>
-          <p class="success">✓ processo concluído</p>
-          <p><strong>resultado:</strong> fluxo executado com sucesso</p>
+          <p><strong>$</strong> learn --by-building</p>
+          <p class="muted">→ entender o conceito</p>
+          <p class="muted">→ implementar uma versão mínima</p>
+          <p class="muted">→ observar limitações reais</p>
+          <p class="muted">→ evoluir a arquitetura</p>
+          <p class="success">✓ conhecimento aplicado</p>
         </div>
       </div>
     </section>
 
     <section id="sobre" class="section two-columns">
       <div class="section-heading reveal">
-        <p class="eyebrow">VISÃO</p>
-        <h2>Tecnologia orientada à eficiência operacional.</h2>
+        <p class="eyebrow">SOBRE O PORTFÓLIO</p>
+        <h2>Aprender tecnologia construindo.</h2>
       </div>
       <div class="about-copy reveal">
-        <p>As soluções apresentadas neste portfólio têm como foco reduzir atividades manuais, integrar sistemas, aumentar a confiabilidade dos dados e melhorar a visibilidade sobre processos operacionais.</p>
-        <p>A proposta é explorar aplicações em que o software atua diretamente na operação: coleta, validação, sincronização, monitoramento, análise e automação de tarefas recorrentes.</p>
+        <p>Os projetos deste portfólio partem de conceitos de engenharia de software e evoluem de forma incremental. A ideia não é apenas demonstrar uma aplicação pronta, mas registrar o caminho entre uma implementação simples e uma arquitetura mais robusta.</p>
+        <p>Cada projeto busca responder perguntas práticas: por que filas existem? Quando o processamento deve ser assíncrono? Como mensagens falham? Onde criptografia entra em um sistema? O que uma blockchain realmente resolve?</p>
       </div>
     </section>
 
     <section id="projetos" class="section">
       <div class="section-heading reveal">
-        <p class="eyebrow">SOLUÇÕES</p>
-        <h2>Projetos aplicados a cenários empresariais.</h2>
-        <p>Iniciativas concebidas para demonstrar automação, integração, processamento de dados e suporte à tomada de decisão.</p>
+        <p class="eyebrow">PROJETOS</p>
+        <h2>Conceitos transformados em código.</h2>
+        <p>Projetos progressivos, com contexto, implementação, limitações e próximos passos documentados.</p>
       </div>
 
       <div class="project-grid">
         <article class="project-card featured reveal">
           <div class="project-number">01</div>
-          <div>
-            <span class="status">MVP</span>
-            <h3>FlowOps</h3>
-            <p>Plataforma para centralizar a execução e o acompanhamento de automações empresariais, com histórico, logs, agendamentos e monitoramento operacional.</p>
-            <div class="tags"><span>Automação</span><span>Workers</span><span>API</span><span>Docker</span></div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="status">EM DESENVOLVIMENTO</span>
+              <span class="project-topic">Mensageria</span>
+            </div>
+            <h3>Carteiro</h3>
+            <p>Projeto de estudo progressivo sobre envio de e-mails e mensageria. Começou com envio direto via SMTP e evoluiu para uma API HTTP síncrona em ASP.NET Core. As próximas etapas introduzem persistência, processamento assíncrono, RabbitMQ, ACK/NACK, retries, Dead Letter Queue e idempotência.</p>
+            <div class="concept-flow" aria-label="Evolução do Carteiro">
+              <span>HTTP API</span><i>→</i><span>SMTP</span><i>→</i><span>Fila</span><i>→</i><span>Worker</span>
+            </div>
+            <div class="tags">
+              <span>.NET 8</span><span>ASP.NET Core</span><span>SMTP</span><span>MailKit</span><span>RabbitMQ</span><span>Mensageria</span>
+            </div>
+            <a class="project-link" href="https://github.com/pedroesquerdo/carteiro" target="_blank" rel="noreferrer">Ver projeto no GitHub ↗</a>
           </div>
         </article>
 
         <article class="project-card reveal">
           <div class="project-number">02</div>
-          <span class="status planned">Planejado</span>
-          <h3>WebIntel</h3>
-          <p>Solução de coleta automatizada de informações públicas da web para acompanhamento de preços, disponibilidade, concorrência e alterações relevantes.</p>
-          <div class="tags"><span>Web Scraping</span><span>Python</span><span>Dados</span></div>
+          <span class="status planned">PRÓXIMO ESTUDO</span>
+          <h3>Filas & processamento assíncrono</h3>
+          <p>Experimentos para compreender producers, consumers, concorrência, retries, confirmação de processamento, ordenação, backpressure e Dead Letter Queues.</p>
+          <div class="tags"><span>RabbitMQ</span><span>Queues</span><span>Workers</span><span>Async</span></div>
         </article>
 
         <article class="project-card reveal">
           <div class="project-number">03</div>
-          <span class="status planned">Planejado</span>
-          <h3>CompanyBot</h3>
-          <p>Assistente corporativo para consulta de documentos, bases de conhecimento e sistemas internos, com respostas contextualizadas e rastreáveis.</p>
-          <div class="tags"><span>IA</span><span>RAG</span><span>APIs</span></div>
+          <span class="status planned">PLANEJADO</span>
+          <h3>Criptografia</h3>
+          <p>Laboratório para explorar hashing, criptografia simétrica e assimétrica, troca de chaves, assinaturas digitais, armazenamento seguro de senhas e casos de uso reais.</p>
+          <div class="tags"><span>AES</span><span>RSA</span><span>Hash</span><span>Assinaturas</span></div>
         </article>
 
         <article class="project-card reveal">
           <div class="project-number">04</div>
-          <span class="status planned">Planejado</span>
-          <h3>DataCheck</h3>
-          <p>Solução de auditoria e validação de planilhas e bases de dados para identificar duplicidades, inconsistências, lacunas e problemas de qualidade.</p>
-          <div class="tags"><span>SQL</span><span>Excel</span><span>ETL</span></div>
+          <span class="status planned">PLANEJADO</span>
+          <h3>Blockchain</h3>
+          <p>Implementação didática de uma cadeia de blocos para estudar hashes, encadeamento, imutabilidade, consenso e a diferença entre banco de dados tradicional e ledger distribuído.</p>
+          <div class="tags"><span>Blockchain</span><span>Hash</span><span>Ledger</span><span>Consenso</span></div>
         </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">05</div>
+          <span class="status planned">PLANEJADO</span>
+          <h3>Web scraping</h3>
+          <p>Coleta estruturada de dados da web para estudar requisições HTTP, parsing, crawling, rate limiting, deduplicação, persistência e automação de coleta.</p>
+          <div class="tags"><span>HTTP</span><span>Parsing</span><span>Crawling</span><span>Dados</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="conceitos" class="section concepts-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">TRILHAS DE ESTUDO</p>
+        <h2>O que o portfólio pretende explorar.</h2>
+      </div>
+      <div class="concept-grid">
+        <div class="concept-item reveal"><strong>01</strong><span>Mensageria & eventos</span></div>
+        <div class="concept-item reveal"><strong>02</strong><span>Filas & concorrência</span></div>
+        <div class="concept-item reveal"><strong>03</strong><span>Criptografia & segurança</span></div>
+        <div class="concept-item reveal"><strong>04</strong><span>Blockchain & sistemas distribuídos</span></div>
+        <div class="concept-item reveal"><strong>05</strong><span>Protocolos & redes</span></div>
+        <div class="concept-item reveal"><strong>06</strong><span>Observabilidade & resiliência</span></div>
+        <div class="concept-item reveal"><strong>07</strong><span>Dados & persistência</span></div>
+        <div class="concept-item reveal"><strong>08</strong><span>Integrações & APIs</span></div>
       </div>
     </section>
 
     <section id="stack" class="section stack-section">
       <div class="section-heading reveal">
         <p class="eyebrow">TECNOLOGIAS</p>
-        <h2>Stack voltada a integração, automação e operação.</h2>
+        <h2>Ferramentas usadas nos experimentos.</h2>
       </div>
       <div class="stack-list reveal">
-        <span>.NET</span><span>SQL Server</span><span>PostgreSQL</span><span>Python</span><span>REST APIs</span><span>Docker</span><span>GitHub Actions</span><span>Linux</span><span>JavaScript</span><span>OpenAI API</span>
-      </div>
-    </section>
-
-    <section id="contato" class="section contact reveal">
-      <p class="eyebrow">CONTATO</p>
-      <h2>Automação, integração e eficiência operacional.</h2>
-      <p>Contato para oportunidades, projetos e discussões sobre soluções tecnológicas aplicadas a processos empresariais.</p>
-      <div class="hero-actions">
-        <a class="button primary" href="mailto:pedroesquerdo87@gmail.com">Entrar em contato</a>
-        <a class="button secondary" href="https://github.com/pedroesquerdo" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <span>.NET</span><span>C#</span><span>ASP.NET Core</span><span>SQL Server</span><span>PostgreSQL</span><span>Python</span><span>REST APIs</span><span>SMTP</span><span>RabbitMQ</span><span>Docker</span><span>GitHub Actions</span><span>Linux</span>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Pedro Esquerdo. Automação, integrações e soluções tecnológicas.</p>
+    <p>© <span id="year"></span> Pedro Esquerdo. Portfólio de estudos e projetos em tecnologia.</p>
     <p class="footer-credit">desenvolvido por <a href="https://www.funildigital.com.br/" target="_blank" rel="noopener noreferrer">Funil Digital</a></p>
   </footer>
 
